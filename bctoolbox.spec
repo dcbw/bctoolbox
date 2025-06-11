@@ -11,8 +11,6 @@ BuildRequires:  openssl-devel
 
 Source0: %{name}-%{version}.tar.gz
 
-%undefine _hardened_build
-%undefine _annotated_build
 
 %description
 Utilities library used by Belledonne Communications softwares
@@ -38,7 +36,7 @@ sed -i 's|cmake_minimum_required(VERSION.*|cmake_minimum_required(VERSION 3.20)|
        -DCMAKE_SKIP_RPATH=YES \
        -DCMAKE_VERBOSE_MAKEFILE=NO \
        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-       -DENABLE_STRICT=YES \
+       -DENABLE_STRICT=NO \
        -DENABLE_MBEDTLS=NO \
        -DENABLE_OPENSSL=YES \
        -DENABLE_TESTS_COMPONENT=NO
